@@ -107,7 +107,7 @@ def getarticlename(singleartlce):
 
     atag = singleartlce.find_all("a",class_="title" )
 	# 标记题目中若出现下列关键词，则标记
-    queries = ["web","track","privacy","fingerprint","Web","Track","Privacy","Fingerprint","Third"]
+    queries = [""]
 
     if len(atag) > 0 :
 		vale = atag[0].contents
@@ -145,16 +145,9 @@ def getarticleurl(singleartlce, articlename):
 
 
 if __name__ == "__main__":
-	#url = "http://link.springer.com/search?date-facet-mode=between&facet-start-year=2014&facet-language=%22En%22&showAll=false&facet-end-year=2017&facet-content-type=%22ConferencePaper%22&query=web+AND+track+AND+privacy&facet-discipline=%22Computer+Science%22"
-	#downloadpath = "K:\\tools\\download pdf of springer\\pdf\\Paper\\"
-	#getallresults(url, downloadpath)
 		
-	#url = "http://link.springer.com/search?date-facet-mode=between&facet-start-year=2014&facet-language=%22En%22&showAll=false&facet-end-year=2017&query=web+AND+track+AND+privacy&facet-discipline=%22Computer+Science%22&facet-content-type=%22Article%22"
-	#downloadpath = "K:\\tools\\download pdf of springer\\pdf\\Article\\"
-	#getallresults(url, downloadpath)
-	
 	# springer的查询结果
-	url = "https://link.springer.com/search?query=%22time+sequence%22+AND+%28discrete%29&date-facet-mode=between&showAll=false&facet-end-year=2017&facet-start-year=2012&facet-discipline=%22Computer+Science%22"
-	# 存放下载文件的路径
-	downloadpath = "P:\\tools\\download pdf of springer\\pdf\\time sequence AND discrete\\"
+	url = ""
+	# 存放下载文件的绝对路径
+	downloadpath = ""
 	getallresults(url, downloadpath)
